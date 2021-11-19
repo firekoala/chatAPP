@@ -1,4 +1,8 @@
 const admin = require('firebase-admin')
+const express = require('express')
+
+const app = express()
+const PORT = 5000
 
 const firebaseConfig = {
   credential: admin.credential.cert(require('./keys/admin.json')),
@@ -51,4 +55,5 @@ const sendMessage = (chatId, sender, msg) => {
     .update({ messages: admin.firestore.FieldValue.arrayUnion(data) })
 }
 
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
 //logData()
