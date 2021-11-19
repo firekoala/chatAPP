@@ -57,3 +57,4 @@ const sendMessage = (chatId, sender, msg) => {
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`))
 //logData()
+suite a une augmentation tarifaire.
